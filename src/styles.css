@@ -1,0 +1,29 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+:root {
+  --primary-color: #d00305;
+}
+
+.header-img {
+  margin: 1rem 0rem;
+  max-width: 400px;
+  width: 40%;
+}
+
+.btn-genre {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.25rem 1rem;
+  font-size: large;
+  color: white;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
