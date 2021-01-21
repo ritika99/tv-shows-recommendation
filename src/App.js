@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import HeaderImage from "/src/images/header-image.svg";
 
-const recommendationDictionary = {
+var showsDictionary = {
   Action: [
     {
       name: "Attack on Titan",
@@ -90,14 +90,20 @@ const recommendationDictionary = {
   ]
 };
 
-var genreList = Object.keys(recommendationDictionary);
+var genreList = Object.keys(showsDictionary);
 
 export default function App() {
-  const [showGenre, setShowGenre] = useState("");
+  const [selectedGenre, setGenre] = useState("Drama");
 
   function genreClickHandler(genre) {
-    setShowGenre(genre);
+    setGenre(genre);
   }
+
+  // if (showsDictionary[selectedGenre]) {
+  //   showsDictionary[selectedGenre].map((show) =>
+  //     console.log(show.name, show.year, show.rating)
+  //   );
+  // }
 
   return (
     <div className="App">
@@ -107,18 +113,30 @@ export default function App() {
       </h1>
       <em>Select a TV show genre</em>
       <div style={{ marginTop: "0.5rem" }}>
-        {genreList.map((genre) => {
-          return (
-            <button
-              className="btn-genre"
-              onClick={() => genreClickHandler(genre)}
-              key={genre}
-            >
+        {genreList.map((genre) => (
+          <button
+            className="btn-genre"
+            onClick={() => genreClickHandler(genre)}
+            key={genre}
+          >
+            {" "}
+            {genre}
+          </button>
+        ))}
+      </div>
+
+      <div>
+        <ul>
+          {showsDictionary[selectedGenre].map((show) => (
+            // console.log(show.name, show.year, show.rating)
+            <li className="list" key={show.name}>
               {" "}
-              {genre}{" "}
-            </button>
-          );
-        })}
+              <h3> {show.name} </h3>
+              <small> {show.year} </small>
+              <div> ⭐ {show.rating}/10 </div>{" "}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

@@ -26,4 +26,19 @@
 
 ul {
   list-style: none;
+  padding-left: 0rem;
+}
+
+.list {
+  margin: 0.5rem auto;
+  max-width: 575px;
+  display: block;
+  padding: 0.5rem 0rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5rem;
+  color: black;
+}
+
+h3 {
+  margin: 0rem;
 }
