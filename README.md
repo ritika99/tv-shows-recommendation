@@ -7,6 +7,6 @@ Recommeneds popular TV shows for different genres like action, comedy, drama, sc
 https://c3kbz.csb.app/ 
 
 ### Screenshots
-<img src="screenshot.png" width="523">   <img src="screenshotMobile.PNG" width="137">
+<kbd><img src="screenshot.png" width="523"></kbd>   <kbd><img src="screenshotMobile.PNG" width="137"></kbd>
 
 
